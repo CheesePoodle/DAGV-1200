@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: BoatModel.ma
-//Last modified: Mon, Feb 10, 2025 03:00:05 PM
+//Last modified: Mon, Feb 10, 2025 03:51:51 PM
 //Codeset: 1252
 requires maya "2024";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "5.3.1.1";
@@ -10,23 +10,23 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202304191415-7fa20164c6";
 fileInfo "osv" "Windows 11 Enterprise v2009 (Build: 22621)";
-fileInfo "UUID" "2F83D005-48D7-8257-F5D1-EB85FFAE7003";
+fileInfo "UUID" "06608786-4A87-1D11-21ED-4FAEC6DDF4F6";
 fileInfo "license" "education";
 createNode transform -s -n "persp";
 	rename -uid "23E895C8-40B3-C07A-8E20-7B98E41FC065";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 11.953128655214613 11.431268854343918 22.586080857707788 ;
-	setAttr ".r" -type "double3" -21.600000000000083 26.800000000000125 -8.9082601798980773e-16 ;
-	setAttr ".rpt" -type "double3" -9.7402368111857314e-19 -7.2109497119157078e-19 2.9831717125571924e-18 ;
+	setAttr ".t" -type "double3" -0.18731057105457122 7.696449646433166 34.916136856708306 ;
+	setAttr ".r" -type "double3" -10.2000000000002 -1.2000000000000026 1.2426767119850497e-17 ;
+	setAttr ".rpt" -type "double3" -1.6936629179609962e-16 5.7096848231678544e-16 1.3736208241910537e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "1A0CA871-4AF4-6A75-BCB6-7187E5D23D5B";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 27.215250408052313;
+	setAttr ".coi" 35.484608771184007;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 0.54407832881888818 1.4126669716778828 1.4990423791161334e-07 ;
+	setAttr ".tp" -type "double3" 0.54407823085784912 1.412666916847229 1.1920928954936546e-07 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "A636B8BF-4F6E-80B7-F08F-91AB841FB411";
@@ -156,7 +156,7 @@ createNode mesh -n "Sand_WBShape" -p "Sand_WB";
 	setAttr ".gtag[4].gtagcmp" -type "componentList" 1 "f[4]";
 	setAttr ".gtag[5].gtagnm" -type "string" "top";
 	setAttr ".gtag[5].gtagcmp" -type "componentList" 1 "f[1]";
-	setAttr ".pv" -type "double2" 0.5 0.625 ;
+	setAttr ".pv" -type "double2" 0.75 0.125 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
 		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
@@ -166,9 +166,9 @@ createNode mesh -n "Sand_WBShape" -p "Sand_WB";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 	setAttr -s 8 ".pt[0:7]" -type "float3"  -0.4628869 0.5 2.5000002 
-		3.5231843 0.5 2.5000002 -0.4628869 -0.0016594529 2.5000002 3.5231843 -0.0016594529 
-		2.5000002 -0.4628869 -0.0016594529 -2.5 3.5231843 -0.0016594529 -2.5 -0.4628869 0.5 
-		-2.5 3.5231843 0.5 -2.5;
+		2.5 0.5 2.5000002 -0.4628869 -0.0016594529 2.5000002 2.5 -0.0016594529 2.5000002 
+		-0.4628869 -0.0016594529 -2.5 2.5 -0.0016594529 -2.5 -0.4628869 0.5 -2.5 2.5 0.5 
+		-2.5;
 	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
 		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
 	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
@@ -212,7 +212,7 @@ createNode mesh -n "Water_WBShape" -p "Water_WB";
 	setAttr ".gtag[4].gtagcmp" -type "componentList" 1 "f[4]";
 	setAttr ".gtag[5].gtagnm" -type "string" "top";
 	setAttr ".gtag[5].gtagcmp" -type "componentList" 1 "f[1]";
-	setAttr ".pv" -type "double2" 0.5 0.375 ;
+	setAttr ".pv" -type "double2" 0.75 0.125 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
 		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
@@ -222,9 +222,8 @@ createNode mesh -n "Water_WBShape" -p "Water_WB";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 	setAttr -s 8 ".pt[0:7]" -type "float3"  -0.4628869 0.99834055 2.5000002 
-		3.5231833 0.99834055 2.5000002 -0.4628869 1.0631256 2.5000002 3.5231833 1.0631256 
-		2.5000002 -0.4628869 1.0631256 -2.5 3.5231833 1.0631256 -2.5 -0.4628869 0.99834055 
-		-2.5 3.5231833 0.99834055 -2.5;
+		2.5 0.99834055 2.5000002 -0.4628869 1.0631256 2.5000002 2.5 1.0631256 2.5000002 -0.4628869 
+		1.0631256 -2.5 2.5 1.0631256 -2.5 -0.4628869 0.99834055 -2.5 2.5 0.99834055 -2.5;
 	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
 		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
 	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
