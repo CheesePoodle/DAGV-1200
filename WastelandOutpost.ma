@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: WastelandOutpost.ma
-//Last modified: Mon, Mar 24, 2025 09:03:54 PM
+//Last modified: Mon, Mar 24, 2025 09:04:42 PM
 //Codeset: 1252
 requires maya "2024";
 requires -nodeType "polyDisc" "modelingToolkit" "0.0.0.0";
@@ -12,17 +12,17 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202310181224-69282f2959";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
-fileInfo "UUID" "E254CB40-482E-CB6B-3282-76A7562F894D";
+fileInfo "UUID" "F940DF42-48A3-2195-B275-418E6440EC99";
 createNode transform -s -n "persp";
 	rename -uid "959D61D5-4CD8-2662-D9F0-5B8E18F5317F";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 16.863084205756081 12.440657231230851 13.380254178759238 ;
-	setAttr ".r" -type "double3" -18.338352726306173 406.59999999966465 0 ;
+	setAttr ".t" -type "double3" 22.7963564832875 14.185538042961229 12.799984078395536 ;
+	setAttr ".r" -type "double3" -18.938352726655118 415.80000000027587 -2.8292552375768447e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "18171844-4F47-773B-B55C-719F402E6DC3";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 25.137603781640124;
+	setAttr ".coi" 29.745351016264422;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -3372,7 +3372,7 @@ createNode polyCube -n "polyCube14";
 	rename -uid "5F4AFED3-4F26-9B11-CD84-30B238D60B30";
 	setAttr ".cuv" 4;
 createNode mayaUsdLayerManager -n "mayaUsdLayerManager1";
-	rename -uid "CAAC74A8-4942-C47C-D044-67B3DBD9DA98";
+	rename -uid "9DE3D718-49AF-F194-572F-F6B662CCEAF2";
 	setAttr ".sst" -type "string" "";
 select -ne :time1;
 	setAttr ".o" 57;
